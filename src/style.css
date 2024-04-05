@@ -445,6 +445,7 @@ a {
 
 #drag_slider_main .drag_slider_wrapper {
     display: flex;
+    touch-action: none;
 }
 
 .drag_slide {
