@@ -122,7 +122,7 @@ export function post() {
     THREE.ColorManagement.enabled = true;
 
     renderer.physicallyCorrectLights = true;
-    renderer.outputEncoding = THREE.sRGBEncoding;
+    //renderer.outputEncoding = THREE.sRGBEncoding;
 
 
     /*Bloom*/
