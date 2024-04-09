@@ -103,7 +103,7 @@ $('#swiper-slide-09').click(function (e) {
 //NOS SERVICES HREF ------------------------------------------------------------------------------
 $('.service_case_01').click(function (e) {
     e.preventDefault();
-    location.href = "Design.html";
+    location.href = "./Design.html";
     return true;
 });
 
