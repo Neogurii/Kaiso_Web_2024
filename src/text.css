@@ -54,6 +54,18 @@ p{
     font-size: 0.8rem;
 }
 
+footer li{
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+}
+
+footer p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 400;
+}
+
 /* ------------------- TABLET + PHONE ------------------- */
 @media (max-width: 850px) {
     .citation{

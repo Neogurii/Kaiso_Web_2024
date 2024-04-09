@@ -44,56 +44,71 @@ document.querySelectorAll("header nav li").forEach((link) => {
 
 
 
-//Drag menu--------------------------------------------------------------------------------------
-/*var slides = jQuery('#drag_slider_main .drag_slider_wrapper').children().length;
-var min = 0;
-var wid = $(".drag_slide").width();
-var max = (slides - 1) * wid;
+//Swiper menu--------------------------------------------------------------------------------------
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: "auto",
+    spaceBetween: 30,
+    loop: true,
+    freeMode: true,
+  });
 
-jQuery("#drag_slider_main .drag_slider_wrapper").width(slides*wid);
 
-jQuery("#drag_slider_main .drag_slider_wrapper").draggable({
-    axis: 'x',
-    drag: function (event, ui) {
-       var left = ui.position.left,
-       offsetWidth = ($(this).width() - $(this).parent().width()) * -1;
+//LE DESIGN C'EST QUOI HREF ------------------------------------------------------------------------------
+$('#swiper-slide-01').click(function (e) {
+    e.preventDefault();
+    location.href = "#";
+    return false;
+});
+$('#swiper-slide-02').click(function (e) {
+    e.preventDefault();
+    location.href = "#";
+    return false;
+});
+$('#swiper-slide-03').click(function (e) {
+    e.preventDefault();
+    location.href = "#";
+    return false;
+});
+$('#swiper-slide-04').click(function (e) {
+    e.preventDefault();
+    location.href = "#";
+    return false;
+});
+$('#swiper-slide-05').click(function (e) {
+    e.preventDefault();
+    location.href = "#";
+    return false;
+});
+$('#swiper-slide-06').click(function (e) {
+    e.preventDefault();
+    location.href = "#";
+    return false;
+});
+$('#swiper-slide-07').click(function (e) {
+    e.preventDefault();
+    location.href = "#";
+    return false;
+});
+$('#swiper-slide-08').click(function (e) {
+    e.preventDefault();
+    location.href = "#";
+    return false;
+});
+$('#swiper-slide-09').click(function (e) {
+    e.preventDefault();
+    location.href = "#";
+    return false;
+});
 
-       if (left > 0) {
-         ui.position.left = 0;
-       }
-       if (offsetWidth > left) {
-         ui.position.left = offsetWidth;
-       }
-    }
-});*/
+//NOS SERVICES HREF ------------------------------------------------------------------------------
+$('.service_case_01').click(function (e) {
+    e.preventDefault();
+    location.href = "Design.html";
+    return true;
+});
 
-const slideable = document.querySelector("#slideable");
-
-let isSlidding = false;
-let x = 0;
-
-// https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements
-const slideableWidth = slideable.scrollWidth + $(".drag_slide").width();
-
-let xMin = -(slideableWidth - window.innerWidth);
-
-slideable.addEventListener("pointerdown", () => (isSlidding = true));
-slideable.addEventListener("pointerup", () => (isSlidding = false));
-slideable.addEventListener("pointerleave", () => (isSlidding = false));
-window.addEventListener("pointerleave", () => (isSlidding = false));
-
-window.addEventListener("pointermove", (ev) => {
-    console.log();
-    if (isSlidding) {
-        x += ev.movementX;
-
-        if (x > 0) {
-            x = 0;
-        } else if (x < xMin) {
-            x = xMin;
-        }
-
-        slideable.style["transform"] = `translate(${x}px, 0px)`;
-        console.log(xMin);
-    }
+$('.service_case_02').click(function (e) {
+    e.preventDefault();
+    location.href = "#";
+    return false;
 });
