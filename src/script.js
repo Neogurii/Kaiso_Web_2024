@@ -50,9 +50,10 @@ var swiper = new Swiper(".mySwiper", {
     spaceBetween: 30,
     loop: true,
     freeMode: true,
-  });
+});
 
 
+/*
 //LE DESIGN C'EST QUOI HREF ------------------------------------------------------------------------------
 $('#swiper-slide-01').click(function (e) {
     e.preventDefault();
@@ -103,7 +104,7 @@ $('#swiper-slide-09').click(function (e) {
 //NOS SERVICES HREF ------------------------------------------------------------------------------
 $('.service_case_01').click(function (e) {
     e.preventDefault();
-    location.href = "./src/Design.html";
+    location.href = "./Design.html";
     return true;
 });
 
@@ -111,4 +112,4 @@ $('.service_case_02').click(function (e) {
     e.preventDefault();
     location.href = "#";
     return false;
-});
+});*/
