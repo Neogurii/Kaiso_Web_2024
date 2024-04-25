@@ -14,7 +14,7 @@ template.innerHTML = `
     <section>
         <h5>À propos</h5>
         <ul>
-            <a href="#"><li>L'équipe</li></a>
+            <a href="./Team.html"><li>L'équipe</li></a>
             <li>L'entreprise</li>
             <li>Nos droits</li>
         </ul>
