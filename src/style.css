@@ -59,10 +59,38 @@ header nav {
 }
 
 .icon {
-    width: 1.4rem;
+    width: 0.65rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    margin: 2rem 0.7rem;
 }
 
-footer .logo{
+#icon_01 {
+    background-image: url("./Assets/Icons/Instagram_black.svg");
+}
+
+#icon_02 {
+    background-image: url("./Assets/Icons/Linkedin_black.svg");
+}
+
+#icon_03 {
+    background-image: url("./Assets/Icons/Twitter_black.svg");
+}
+
+#icon_04 {
+    background-image: url("./Assets/Icons/Mail_black.svg");
+}
+
+#icon_05 {
+    background-image: url("./Assets/Formation/Qualiopi_certification.png");
+}
+
+#icon_06 {
+    background-image: url("./Assets/Formation/Qualiopi_certification.png");
+}
+
+footer .logo {
     background-image: url("./Assets/Logo_vertical_sansStudio.png");
     width: 3rem;
     height: 3rem;
@@ -93,6 +121,50 @@ footer .logo{
     color: #A9B2E7;
 }
 
+.background_pattern {
+    background-image: url("./Assets/Pattern_background.png");
+    background-color: #F2F2F2;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.drop_shadow {
+    box-shadow: 0px 0px 20px #0000003e;
+}
+
+.banner_background {
+    background-repeat: no-repeat;
+}
+
+.banner_background_formation {
+    background-image: url("./Assets/Formation/Notebook_background.png");
+    background-position: bottom;
+    background-size: contain;
+}
+
+.banner_background_africa {
+    background-image: url("./Assets/Africa/Africa_phones_background.png");
+    background-position: 50vw -5rem;
+    background-size: 50rem;
+
+    position: absolute;
+    width: 120%;
+    height: 120%;
+
+    z-index: 0;
+}
+
+.article_home{
+    margin-bottom: 15rem;
+}
+
+.gradient {
+    background: rgb(177, 166, 216);
+    background: linear-gradient(0deg, rgba(177, 166, 216, 1) 0%, rgba(166, 182, 215, 1) 100%);
+}
+
 /*Burger Menu ------------------------------------------------------------------------*/
 li {
     list-style: none;
@@ -101,6 +173,12 @@ li {
 .btn {
     cursor: pointer;
     transition: 0.2s;
+}
+
+.btn_white {
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: #F2F2F2;
 }
 
 .btn_header {
@@ -133,8 +211,6 @@ a {
     background-color: #F2F2F2;
     padding: 1rem 1.5rem;
     border-radius: 10rem;
-
-    box-shadow: 0px 2px 8px 1px #a6b6d73d;
 }
 
 /*FIN Burger Menu -----------------------------------------------------------------*/
@@ -147,6 +223,28 @@ a {
     border-style: solid;
 
     align-items: center;
+}
+
+.btn_base:hover{
+    background-color: #F2F2F2;
+    color: #A6B6D7;
+    border-color: #f2f2f2;
+    scale: 1.1;
+}
+
+.btn_neomorph {
+    padding: 0.75rem 1.25rem;
+    box-shadow: 15px 13px 44px #d5494921, -12px -12px 44px #ccf4ff54;
+    /*box-shadow:   24px 24px 20px #e3e3e3, -24px -24px 20px #ffffff;*/
+}
+
+.btn_neomorph:active{
+    box-shadow: inset 0px 1px 11px #d5494921, inset -4px -3px 5px #ccf4ff54;
+}
+
+.btn_neomorph:hover{
+    box-shadow: 15px 13px 44px #ccf4ff54, -12px -12px 44px #d5494921;
+    scale: 1.01;
 }
 
 .w50-60-100 {
@@ -166,7 +264,7 @@ a {
 }
 
 /*Slideshow -----------------------------------------------------------------*/
-#slideshow {
+.slideshow {
     width: 100vw;
     margin: 0 auto;
     overflow: hidden;
@@ -189,12 +287,12 @@ a {
     float: left;
 }
 
-#slideshow {
+.slideshow {
     background-color: #F2F2F2;
     padding-bottom: 3rem;
 }
 
-#slideshow h4 {
+.slideshow h4 {
     text-align: center;
 }
 
@@ -398,37 +496,18 @@ a {
     }
 }
 
-#slideshow section {
+.slideshow section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#slideshow section img {
+.slideshow section img {
     width: 4rem;
 }
 
 /*FIN Slideshow -----------------------------------------------------------------*/
-
-/*
-.icon_design {
-    display: flex;
-    justify-content: center;
-}
-
-.icon_design img,
-.icon_design_container p {
-    width: 80%;
-}
-
-.icon_design_container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 0 1.25rem;
-}*/
 
 .row_column {
     flex-direction: row;
@@ -439,18 +518,6 @@ a {
 .title_design {
     align-items: flex-start;
 }
-
-/*
-.question_hover {
-    display: none;
-    position: absolute;
-    top: -2rem;
-    right: -0.25rem;
-}
-
-.icon_design:hover .question_hover{
-    display: block;
-}*/
 
 /*Drag Slideshow -----------------------------------------------------------------*/
 .swiper {
@@ -473,36 +540,176 @@ a {
     width: 10rem;
 }
 
-.swiper a{
+.swiper a {
     display: flex;
     width: 100%;
     height: 100%;
 }
+
 /*FIN Drag Slideshow -----------------------------------------------------------------*/
 
+/*Services (Pedagogie + jeu mobile) cases -----------------------------------------------------------------*/
 .service_case {
-    position: relative;
-    height: 9rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    cursor: pointer;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    color: black;
-}
+    justify-content: space-between;
+    flex-direction: row;
+    position: relative;
 
-.service_case_01 {
-    margin-top: 5rem;
-    background-color: antiquewhite;
+    background-color: #F2F2F2;
+    margin-top: 3rem;
+    padding: 3rem 2rem 5rem 2rem;
 }
 
 .service_case_02 {
+    justify-content: flex-end;
+    margin-top: 5rem;
+}
+
+.half_desktop {
+    width: 50%;
+}
+
+.service_text {
+    width: 40%;
+    padding-left: 2rem;
+}
+
+.service_image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    width: 50%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+}
+
+.service_image_01 {
+    background-image: url("./Assets/Home/Formation.png");
+    right: 0;
+}
+
+.service_image_02 {
+    background-color: #6c4048;
+    left: 0;
+}
+
+/*FIN Services (Pedagogie + jeu mobile) cases -----------------------------------------------------------------*/
+
+/*FORMATION -----------------------------------------------------------------*/
+.formation_case {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    position: relative;
+
     margin-top: 2rem;
-    margin-bottom: 5rem;
-    background-color: antiquewhite;
+    padding: 3rem 2rem 5rem 2rem;
+}
+
+.formation_text {
+    width: 40%;
+    padding-left: 2rem;
+}
+
+.formation_image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    height: 16rem;
+}
+
+.formation_image_01 {
+    background-image: url("./Assets/Home/Formation.png");
+}
+
+.formation_image_02 {
+    background-color: #6c4048;
+}
+
+/*FIN FORMATION -----------------------------------------------------------------*/
+
+/*Projets cases -----------------------------------------------------------------*/
+.tag {
+    background: #BE0426;
+    color: #F2F2F2;
+    padding: 0.5rem 0.5rem;
+    border-radius: 5rem;
+}
+
+.wrapper {
+    display: grid;
+    width: 75%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 3rem;
+
+    background-color: #F2F2F2;
+}
+
+.case {
+    background-color: #F8F8F0;
+    padding: 2rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 20rem;
+    text-decoration: none;
+
+    -webkit-box-shadow: -1px 9px 18px 0px rgba(79, 56, 29, 0.5);
+    -moz-box-shadow: -1px 9px 18px 0px rgba(79, 56, 29, 0.5);
+    box-shadow: -1px 9px 18px 0px rgba(79, 56, 29, 0.5);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.case-one {
+    background-image: url("./Assets/Africa/CoupeTouilleMiniature.png");
+}
+
+.case-two {
+    background-image: url("./Assets/Africa/TeteCreuxMiniature.png");
+}
+
+
+.case>div {
+    display: flex;
+    justify-content: space-between;
+    color: #17222B;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+/*FINProjets cases -----------------------------------------------------------------*/
+
+.phone_column{
+    flex-direction: row;
+}
+
+.line{
+    margin: 0;
+}
+
+.w70-70-100{
+    width: 70%;
+}
+
+.information_case{
+    width: calc(100vw/3);
+    min-height: calc(100vw/3);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+
+    text-align: center;
+}
+
+.information_section{
+    flex-direction: row;
 }
 
 /* ------------------- TABLET + PHONE ------------------- */
@@ -512,15 +719,6 @@ a {
         display: flex;
         align-items: center;
     }
-
-    /*
-    .icon_design {
-        width: 15rem;
-    }
-
-    .icon_design img {
-        width: 100%;
-    }*/
 
     .icon_design_container {
         margin-top: 2rem;
@@ -557,6 +755,33 @@ a {
         width: 2.6rem;
         height: 2.6rem;
     }
+
+    /*Projets cases -----------------------------------------------------------------------*/
+    .wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .case {
+        height: 15rem;
+        filter: none;
+    }
+
+    /*FIN Projets cases -----------------------------------------------------------------------*/
+
+    .banner_background_africa {
+        background-position: 40vw 5rem;
+        background-size: 40rem;
+        width: 120%;
+        height: 120%;
+    }
+    
+    .article_home{
+        margin-bottom: 8rem;
+    }
+
+    .information_case{
+        justify-content: flex-start;
+    }
 }
 
 /* ------------------- PHONE ------------------- */
@@ -587,18 +812,18 @@ a {
         height: 2.6rem;
     }
 
-    footer .footer_info{
+    footer .footer_info {
         flex-direction: column;
     }
 
-    footer .logo{
+    footer .logo {
         margin: 0 auto;
     }
 
-    footer section{
+    footer section {
         padding-top: 2rem;
     }
-    
+
 
     #icons {
         display: block;
@@ -693,4 +918,110 @@ a {
         width: 85vw;
     }
 
+    /*Projets cases -----------------------------------------------------------------------*/
+    .wrapper {
+        width: 80vw;
+
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .case {
+        height: 35vh;
+        filter: none;
+    }
+
+    /*FIN Projets cases -----------------------------------------------------------------------*/
+
+
+    /*Services (Pedagogie + jeu mobile) cases -----------------------------------------------------------------*/
+    .half_desktop {
+        width: 100%;
+    }
+
+    .service_image {
+        width: 100%;
+        height: 15rem;
+
+        position: relative;
+        border-radius: 0;
+    }
+
+    .service_text {
+        padding: 3rem 0;
+    }
+
+    .service_text p,
+    .service_text h3,
+    .service_text a {
+        margin: 0 2rem;
+    }
+
+    .service_case {
+        margin-top: 2rem;
+        padding: 0;
+        border-radius: 0;
+
+        flex-direction: column-reverse;
+    }
+
+    .service_case_02 {
+        flex-direction: column;
+    }
+
+    /*FIN Services (Pedagogie + jeu mobile) cases -----------------------------------------------------------------*/
+
+    /*SFORMATION -----------------------------------------------------------------*/
+    .formation_image {
+        width: 100%;
+        height: 15rem;
+    }
+
+    .formation_text {
+        padding: 3rem 0;
+    }
+
+    .formation_case {
+        margin-top: 2rem;
+        padding: 0;
+        border-radius: 0;
+
+        flex-direction: column-reverse;
+    }
+
+    .formation_case_02 {
+        flex-direction: column;
+    }
+    /*FORMATION -----------------------------------------------------------------*/
+
+    .phone_column{
+        flex-direction: column;
+    }
+
+    .line{
+        margin: 5rem 0;
+    }
+
+    .banner_background_africa {
+        background-position: 18vw 19rem;
+        background-size: 25rem;
+        width: 120%;
+        height: 120%;
+    }
+    
+    .article_home{
+        margin-bottom: 10rem;
+    }
+
+    .w70-70-100{
+        width: 100%;
+    }
+    
+    .information_section{
+        flex-direction: column;
+    }
+
+    .information_case{
+        width: 100%;
+        height: calc(100vw);
+    }
 }

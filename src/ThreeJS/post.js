@@ -206,7 +206,7 @@ function resizeRendererToDisplaySize(renderer) {
     }
     if (canvas.clientWidth <= 650) {
         camera.position.set(20, 40, 20);
-        camera.lookAt(-5, 5, -2);
+        camera.lookAt(-5, 0, -2);
         //camera.rotation.x = -1;
 
         scene.fog = new THREE.Fog(0xBE0426, 20, 180);

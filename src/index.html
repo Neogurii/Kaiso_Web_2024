@@ -7,6 +7,7 @@
     <!--CSS links-->
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./text.css">
+    <!--Fav Icon-->
     <link rel="icon" type="image/png" href="./Assets/Logo_square.png" />
     <!--Font links-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,9 +28,10 @@
     <!--CATCH PHRASE--------------------------------------------------------------------------------------------------->
     <article style="position: relative; display: flex; flex-direction: column; align-items: center;">
         <div class="margin home">
-            <h1 class="w50-60-100 white" style="font-size: 8vmin;">LE SLOGAN HYPER COOL DE NOTRE ENTREPRISE</h1>
-            <p style="margin-bottom: 2rem;" class="white">On est la, ce que on est la veut dire, chomage</p>
-            <a href="" class="btn btn_base white">Discutez avec nous &#10140;</a>
+            <h1 class="w50-60-100 white" style="font-size: 3rem;">STIMULONS VOTRE CRÉATIVITÉ</h1>
+            <p style="margin-bottom: 2rem;" class="white">Grâce à nos designers pluridisciplinaires et multi-culturels !
+            </p>
+            <a target="_blank" rel="noopener noreferrer" href="mailto:contact@kaisostudio.org" class="btn btn_base white">Discutez avec nous &#10140;</a>
         </div>
         <!--THREE.JS-->
         <canvas id="c"></canvas>
@@ -37,7 +39,7 @@
     <!--CATCH PHRASE FIN--------------------------------------------------------------------------------------------------->
 
     <!--Ils nous font confiance----------------------------------------------------------------------------------------->
-    <div id="slideshow">
+    <div id="newHeader" class="slideshow drop_shadow" style="z-index: 10;">
         <h3 style="display: flex; width: 100%; justify-content: center; padding: 4rem 0rem;">Ils nous font confiance
         </h3>
         <div class="container">
@@ -80,19 +82,33 @@
     <!--Ils nous font confiance FIN----------------------------------------------------------------------------------------->
 
     <!--Nos services ------------------------------------------------------------------------------------------------------->
-    <section style="background-color: #A6B6D7; width: 100%; display: flex; justify-content: center; flex-direction: column; align-items: center;">
-        <a href="./Design.html"><article class="margin service_case service_case_01">
-            <h3 style="position: absolute;">La pédagogie design en entreprise</h3>
-        </article></a>
-        <a href="#"><article class="margin service_case service_case_02">
-            <h3 style="position: absolute;">Les jeux mobiles en Afrique</h3>
-        </article></a>
+    <section class="background_pattern"
+        style="width: 100%; display: flex; justify-content: center; flex-direction: column; align-items: center; padding: 5rem 0;">
+        <article class="margin service_case drop_shadow">
+            <div class="half_desktop service_text">
+                <h3 style="font-size: 2rem; margin-bottom: 2rem;">Formations</h3>
+                <p style="margin-bottom: 4rem;">Nous vous accompagnons pour que vous puissiez utiliser la méthode du
+                    design thinking dans vos travaux.</p>
+                <a href="./Formation.html" class="btn_white btn_neomorph black">En savoir plus &#10140;</a>
+            </div>
+            <div class="service_image service_image_01"></div>
+        </article>
+
+        <article class="margin service_case service_case_02 drop_shadow">
+            <div class="service_image service_image_02"></div>
+            <div class="half_desktop service_text">
+                <h3 style="font-size: 2rem; margin-bottom: 2rem;">Notre ambition</h3>
+                <p style="margin-bottom: 4rem;">Nous avons pour objectif d’utiliser nos outils et méthodologies sur le
+                    continent Africain qui regorge d’opportunités.</p>
+                <a href="./Ambition.html" class="btn_white btn_neomorph black">En savoir plus &#10140;</a>
+            </div>
+        </article>
     </section>
     <!--Nos services FIN------------------------------------------------------------------------------------------------------->
 
     <!--Le design genre c quoi ? ------------------------------------------------------------------------------------------->
-    <!-- Swiper -->
-    <div class="swiper mySwiper" style="padding-bottom: 4rem;">
+    <!-- Swiper 
+    <div id="Design" class="swiper mySwiper" style="padding-bottom: 4rem;">
         <div class="swiper-wrapper">
             <div class="swiper-slide" id="swiper-slide-01" style="width: 20rem;"><a href="#">Slide 1</a></div>
             <div class="swiper-slide" id="swiper-slide-02" style="width: 20rem;"><a href="#">Slide 2</a></div>
@@ -104,8 +120,10 @@
             <div class="swiper-slide" id="swiper-slide-08" style="width: 20rem;"><a href="#">Slide 8</a></div>
             <div class="swiper-slide" id="swiper-slide-09" style="width: 20rem;"><a href="#">Slide 9</a></div>
         </div>
-        <div class="swiper-pagination"></div>
-    </div>
+        <div class="swiper-button-next" style="top: 5rem;"></div>
+        <div class="swiper-button-prev" style="top: 5rem;"></div>
+        <div class="swiper-pagination" style="top: 10rem;"></div>
+    </div>-->
     <!--Le design genre c quoi ? FIN ------------------------------------------------------------------------------------------->
 
     <!--Footer links-->

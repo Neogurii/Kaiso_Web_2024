@@ -11,6 +11,13 @@ h1 {
     margin-bottom: 1rem;
 }
 
+h2{
+    font-family: 'Righteous', cursive;
+    text-transform: uppercase;
+    line-height: 100%;
+    margin-bottom: 1rem;
+}
+
 h4{
     font-family: 'Roboto', sans-serif;
     font-size: 1.2rem;
@@ -31,13 +38,19 @@ h3{
     font-size: 1.25rem;
 }
 
+h5{
+    font-family: 'Righteous', cursive;
+    text-transform: uppercase;
+    line-height: 100%;
+}
+
 h6{
     font-family: 'Roboto', sans-serif;
     font-size: 0.6rem;
     font-weight: 400;
 }
 
-.btn {
+.btn, .btn_white {
     font-family: 'Roboto', sans-serif;
     font-size: 0.9rem;
     font-weight: 400;
@@ -52,6 +65,7 @@ h6{
 p{
     font-family: 'Roboto', sans-serif;
     font-size: 0.8rem;
+    line-height: 1.5rem;
 }
 
 footer li{
@@ -63,6 +77,12 @@ footer li{
 footer p{
     font-family: 'Roboto', sans-serif;
     font-size: 0.6rem;
+    font-weight: 400;
+}
+
+.tag{
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.7rem;
     font-weight: 400;
 }
 

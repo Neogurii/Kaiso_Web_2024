@@ -1,35 +1,38 @@
-//SlideShow---------------------------------------------------------------------------------------
+//Header onScroll display none--------------------------------------------------------------------------------------
+    $(window).on("scroll", function () {
+        if ($(window).scrollTop() === 0) {
+            $("header .logo").show();
+            header.style.justifyContent = "space-between";
+        } else {
+            $("header .logo").hide();
+            header.style.justifyContent = "flex-end";
+        }
+    
+        if ($(window).scrollTop() > $("#newHeader").offset().top - 80) {
+            document.querySelectorAll(".btn_header").forEach((button) => {
+                button.classList.add("blue");
+                button.classList.remove("white");
+            });
+            document.querySelector("header nav").classList.add("bg_header");
+            document.querySelector("header nav").classList.add("drop_shadow");
+        } else {
+            document.querySelectorAll(".btn_header").forEach((button) => {
+                button.classList.remove("blue");
+                button.classList.add("white");
+            });
+            document.querySelector("header nav").classList.remove("bg_header");
+            document.querySelector("header nav").classList.remove("drop_shadow");
+        }
+    });
 
-
-//SCROLL--------------------------------------------------------------------------------------
-$(window).on("scroll", function () {
-    if ($(window).scrollTop() === 0) {
-        $("header .logo").show();
-        header.style.justifyContent = "space-between";
-    } else {
-        $("header .logo").hide();
-        header.style.justifyContent = "flex-end";
-    }
-
-    //console.log($(window).height());
-    //console.log($("#slideshow").offset().top);
-
-    if ($(window).scrollTop() > $("#slideshow").offset().top - 80) {
-        document.querySelectorAll(".btn_header").forEach((button) => {
-            button.classList.add("blue");
-            button.classList.remove("white");
-        });
-        document.querySelector("header nav").classList.add("bg_header");
-    } else {
-        document.querySelectorAll(".btn_header").forEach((button) => {
-            button.classList.remove("blue");
-            button.classList.add("white");
-        });
-        document.querySelector("header nav").classList.remove("bg_header");
-    }
-
-});
-
+if (!window.location.href.includes('index')) {
+    document.querySelectorAll(".btn_header").forEach((button) => {
+        button.classList.add("blue");
+        button.classList.remove("white");
+    });
+    document.querySelector("header nav").classList.add("bg_header");
+    document.querySelector("header nav").classList.add("drop_shadow");
+}
 
 //Burger Menu--------------------------------------------------------------------------------------
 $("#icons").click(() => {
@@ -50,6 +53,14 @@ var swiper = new Swiper(".mySwiper", {
     spaceBetween: 30,
     loop: true,
     freeMode: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
 });
 
 
