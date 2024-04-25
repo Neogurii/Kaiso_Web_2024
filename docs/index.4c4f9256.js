@@ -1,5 +1,4 @@
-const template = document.createElement("template");
-template.innerHTML = `
+const e=document.createElement("template");e.innerHTML=`
 <footer style="display: flex; flex-direction: column; align-items: center;" class="drop_shadow">
 <div class="margin footer_info" style="display: flex; justify-content: space-between;">
     <a class="logo" href="./index.html"></a>
@@ -13,10 +12,10 @@ template.innerHTML = `
     </section>
 
     <section>
-        <h5 class="fr">À propos</h5>
+        <h5 class="fr">\xc0 propos</h5>
         <h5 class="eng">About us</h5>
         <ul>
-            <a class="fr" href="./Team.html"><li>L'équipe</li></a>
+            <a class="fr" href="./Team.html"><li>L'\xe9quipe</li></a>
             <a class="eng" href="./Team.html"><li>The team</li></a>
             <li class="fr">Nos droits</li>
             <li class="eng">Our rights</li>
@@ -30,7 +29,7 @@ template.innerHTML = `
     <a target="_blank" rel="noopener noreferrer" href="mailto:contact@kaisostudio.org" class="icon" id="icon_04"></a>
 </article>
 
-<p>Kaiso Studio © 2024</p>
+<p>Kaiso Studio \xa9 2024</p>
 </footer>
 
 <style>
@@ -67,5 +66,4 @@ template.innerHTML = `
     }
 
 </style>
-`
-document.body.appendChild(template.content)
+`,document.body.appendChild(e.content);

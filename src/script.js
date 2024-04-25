@@ -1,3 +1,44 @@
+//Languages ----------------------------------------------------------
+function translate (){
+    var lg = localStorage.getItem("language");
+    console.log(lg);
+
+    if(lg === null){
+        localStorage.setItem("language", "fr");
+        console.log(localStorage.language);
+    }
+
+    if(lg == "fr"){
+        $(".eng").hide();
+        $(".fr").show();
+        console.log("C'est en français");
+    }
+
+    if(lg == "eng"){
+        $(".fr").hide();
+        $(".eng").show();
+        console.log("It's in English");
+    }
+}
+
+translate();
+
+
+
+$("#btn_fr").click(()=>{
+    localStorage.setItem("language", "fr");
+    console.log(localStorage.language);
+    translate();
+})
+
+$("#btn_eng").click(()=>{
+    localStorage.setItem("language", "eng");
+    console.log(localStorage.language);
+    translate();
+})
+
+
+
 //Header onScroll display none--------------------------------------------------------------------------------------
     $(window).on("scroll", function () {
         if ($(window).scrollTop() === 0) {

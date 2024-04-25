@@ -156,7 +156,7 @@ footer .logo {
     z-index: 0;
 }
 
-.article_home{
+.article_home {
     margin-bottom: 15rem;
 }
 
@@ -182,9 +182,9 @@ li {
 }
 
 .btn_header {
-    min-width: 4rem;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.7rem;
     align-items: center;
+    justify-content: center;
 }
 
 /*
@@ -193,10 +193,6 @@ header li a:hover {
     border-width: 0.2rem;
     border-bottom: 0.2rem solid;
 }*/
-
-header li {
-    margin-left: 1.5rem;
-}
 
 a {
     text-decoration: none;
@@ -209,7 +205,7 @@ a {
 
 .bg_header {
     background-color: #F2F2F2;
-    padding: 1rem 1.5rem;
+    padding: 0.7rem 1.5rem;
     border-radius: 10rem;
 }
 
@@ -225,7 +221,7 @@ a {
     align-items: center;
 }
 
-.btn_base:hover{
+.btn_base:hover {
     background-color: #F2F2F2;
     color: #A6B6D7;
     border-color: #f2f2f2;
@@ -238,11 +234,11 @@ a {
     /*box-shadow:   24px 24px 20px #e3e3e3, -24px -24px 20px #ffffff;*/
 }
 
-.btn_neomorph:active{
+.btn_neomorph:active {
     box-shadow: inset 0px 1px 11px #d5494921, inset -4px -3px 5px #ccf4ff54;
 }
 
-.btn_neomorph:hover{
+.btn_neomorph:hover {
     box-shadow: 15px 13px 44px #ccf4ff54, -12px -12px 44px #d5494921;
     scale: 1.01;
 }
@@ -576,7 +572,6 @@ a {
 
 .service_image {
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: left;
     width: 50%;
     height: 100%;
@@ -587,11 +582,13 @@ a {
 
 .service_image_01 {
     background-image: url("./Assets/Home/Formation.png");
+    background-size: cover;
     right: 0;
 }
 
 .service_image_02 {
-    background-color: #6c4048;
+    background-image: url("./Assets/Home/Ambition.png");
+    background-size: contain;
     left: 0;
 }
 
@@ -684,19 +681,19 @@ a {
 
 /*FINProjets cases -----------------------------------------------------------------*/
 
-.phone_column{
+.phone_column {
     flex-direction: row;
 }
 
-.line{
+.line {
     margin: 0;
 }
 
-.w70-70-100{
+.w70-70-100 {
     width: 70%;
 }
 
-.information_case{
+.information_case {
     width: calc(100vw/3);
     min-height: calc(100vw/3);
     display: flex;
@@ -708,8 +705,39 @@ a {
     text-align: center;
 }
 
-.information_section{
+.information_section {
     flex-direction: row;
+}
+
+.character {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 8rem;
+    height: 13rem
+}
+
+.character_adrien {
+    background-image: url('./Assets/Logo_square.png');
+}
+
+.adrien_background {
+    background-color: #F2F2F2;
+    background-image: url('./Assets/Logo.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+}
+
+.character_mike {
+    background-image: url('./Assets/Logo_square.png');
+}
+
+.mike_background {
+    background-color: #F2F2F2;
+    background-image: url('./Assets/Logo.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
 }
 
 /* ------------------- TABLET + PHONE ------------------- */
@@ -741,65 +769,19 @@ a {
     .title_design {
         align-items: center;
     }
-}
-
-/* ------------------- TABLET ------------------- */
-@media (min-width: 650px) and (max-width: 1023px) {
-
-    .w50-60-100 {
-        width: calc(55% + 3rem);
-    }
-
-    .logo {
-        background-image: url("./Assets/Logo_square.png");
-        width: 2.6rem;
-        height: 2.6rem;
-    }
-
-    /*Projets cases -----------------------------------------------------------------------*/
-    .wrapper {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .case {
-        height: 15rem;
-        filter: none;
-    }
-
-    /*FIN Projets cases -----------------------------------------------------------------------*/
-
-    .banner_background_africa {
-        background-position: 40vw 5rem;
-        background-size: 40rem;
-        width: 120%;
-        height: 120%;
-    }
-    
-    .article_home{
-        margin-bottom: 8rem;
-    }
-
-    .information_case{
-        justify-content: flex-start;
-    }
-}
-
-/* ------------------- PHONE ------------------- */
-@media (max-width: 650px) {
 
     /*Menu burger -------------------------------------------------------------------------*/
     .btn_header {
         padding: 1rem 2rem 1rem 1rem;
-        margin: 0rem 1rem;
-        color: rgb(255, 255, 255);
-
-        border-radius: 0.5rem;
-        border-width: 0.2rem;
-        border-style: solid;
-        border-color: #afc0e2;
+        margin: 1.5rem 1rem;
+        margin-right: 10vw;
+        color: rgb(0, 0, 0);
 
         align-items: center;
-        background-color: #A6B6D7;
+        background-color: #F2F2F2;
+
+        padding: 0.75rem 1.25rem;
+        box-shadow: 15px 13px 44px #d5494921, -12px -12px 44px #ccf4ff54;
     }
 
     .btn_header:hover {
@@ -874,7 +856,7 @@ a {
     }
 
     header.active .fond_menu {
-        width: calc(100% - 6rem);
+        width: 15rem;
     }
 
     .bg_header {
@@ -884,6 +866,61 @@ a {
         padding: 0;
     }
 
+    header {
+        margin-top: 1.5rem;
+    }
+
+    header.active nav {
+        display: flex;
+        padding: 4rem 2rem;
+    }
+
+    /*Menu burger FIN---------------------------------------------------------------------*/
+}
+
+/* ------------------- TABLET ------------------- */
+@media (min-width: 650px) and (max-width: 1023px) {
+
+    .w50-60-100 {
+        width: calc(55% + 3rem);
+    }
+
+    .logo {
+        background-image: url("./Assets/Logo_square.png");
+        width: 2.6rem;
+        height: 2.6rem;
+    }
+
+    /*Projets cases -----------------------------------------------------------------------*/
+    .wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .case {
+        height: 15rem;
+        filter: none;
+    }
+
+    /*FIN Projets cases -----------------------------------------------------------------------*/
+
+    .banner_background_africa {
+        background-position: 40vw 5rem;
+        background-size: 40rem;
+        width: 120%;
+        height: 120%;
+    }
+
+    .article_home {
+        margin-bottom: 8rem;
+    }
+
+    .information_case {
+        justify-content: flex-start;
+    }
+}
+
+/* ------------------- PHONE ------------------- */
+@media (max-width: 650px) {
     .home {
         margin-top: 20vmax;
         margin-bottom: 40vmax;
@@ -896,17 +933,6 @@ a {
     .home p {
         text-align: center;
     }
-
-    header {
-        margin-top: 1.5rem;
-    }
-
-    header.active nav {
-        display: flex;
-        padding-top: 4rem;
-    }
-
-    /*Menu burger FIN---------------------------------------------------------------------*/
 
     .w50-60-100 {
         width: 100%;
@@ -991,13 +1017,14 @@ a {
     .formation_case_02 {
         flex-direction: column;
     }
+
     /*FORMATION -----------------------------------------------------------------*/
 
-    .phone_column{
+    .phone_column {
         flex-direction: column;
     }
 
-    .line{
+    .line {
         margin: 5rem 0;
     }
 
@@ -1007,21 +1034,34 @@ a {
         width: 120%;
         height: 120%;
     }
-    
-    .article_home{
+
+    .article_home {
         margin-bottom: 10rem;
     }
 
-    .w70-70-100{
+    .w70-70-100 {
         width: 100%;
     }
-    
-    .information_section{
+
+    .information_section {
         flex-direction: column;
     }
 
-    .information_case{
+    .information_case {
         width: 100%;
         height: calc(100vw);
+    }
+
+    .character {
+        width: 5rem;
+        height: 8rem;
+    }
+
+    .mike_background {
+        background-image: none;
+    }
+
+    .adrien_background {
+        background-image: none;
     }
 }
