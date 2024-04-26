@@ -1,20 +1,20 @@
 //Languages ----------------------------------------------------------
-function translate (){
+function translate() {
     var lg = localStorage.getItem("language");
     console.log(lg);
 
-    if(lg === null){
+    if (lg === null || lg === undefined) {
         localStorage.setItem("language", "fr");
         console.log(localStorage.language);
     }
 
-    if(lg == "fr"){
+    if (lg == "fr") {
         $(".eng").hide();
         $(".fr").show();
         console.log("C'est en français");
     }
 
-    if(lg == "eng"){
+    if (lg == "eng") {
         $(".fr").hide();
         $(".eng").show();
         console.log("It's in English");
@@ -25,13 +25,13 @@ translate();
 
 
 
-$("#btn_fr").click(()=>{
+$("#btn_fr").click(() => {
     localStorage.setItem("language", "fr");
     console.log(localStorage.language);
     translate();
 })
 
-$("#btn_eng").click(()=>{
+$("#btn_eng").click(() => {
     localStorage.setItem("language", "eng");
     console.log(localStorage.language);
     translate();
@@ -40,31 +40,31 @@ $("#btn_eng").click(()=>{
 
 
 //Header onScroll display none--------------------------------------------------------------------------------------
-    $(window).on("scroll", function () {
-        if ($(window).scrollTop() === 0) {
-            $("header .logo").show();
-            header.style.justifyContent = "space-between";
-        } else {
-            $("header .logo").hide();
-            header.style.justifyContent = "flex-end";
-        }
-    
-        if ($(window).scrollTop() > $("#newHeader").offset().top - 80) {
-            document.querySelectorAll(".btn_header").forEach((button) => {
-                button.classList.add("blue");
-                button.classList.remove("white");
-            });
-            document.querySelector("header nav").classList.add("bg_header");
-            document.querySelector("header nav").classList.add("drop_shadow");
-        } else {
-            document.querySelectorAll(".btn_header").forEach((button) => {
-                button.classList.remove("blue");
-                button.classList.add("white");
-            });
-            document.querySelector("header nav").classList.remove("bg_header");
-            document.querySelector("header nav").classList.remove("drop_shadow");
-        }
-    });
+$(window).on("scroll", function () {
+    if ($(window).scrollTop() === 0) {
+        $("header .logo").show();
+        header.style.justifyContent = "space-between";
+    } else {
+        $("header .logo").hide();
+        header.style.justifyContent = "flex-end";
+    }
+
+    if ($(window).scrollTop() > $("#newHeader").offset().top - 80) {
+        document.querySelectorAll(".btn_header").forEach((button) => {
+            button.classList.add("blue");
+            button.classList.remove("white");
+        });
+        document.querySelector("header nav").classList.add("bg_header");
+        document.querySelector("header nav").classList.add("drop_shadow");
+    } else {
+        document.querySelectorAll(".btn_header").forEach((button) => {
+            button.classList.remove("blue");
+            button.classList.add("white");
+        });
+        document.querySelector("header nav").classList.remove("bg_header");
+        document.querySelector("header nav").classList.remove("drop_shadow");
+    }
+});
 
 if (!window.location.href.includes('index')) {
     document.querySelectorAll(".btn_header").forEach((button) => {
@@ -93,17 +93,11 @@ var swiper = new Swiper(".mySwiper", {
     slidesPerView: "auto",
     spaceBetween: 30,
     loop: true,
-    freeMode: true,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
     },
 });
-
 
 /*
 //LE DESIGN C'EST QUOI HREF ------------------------------------------------------------------------------

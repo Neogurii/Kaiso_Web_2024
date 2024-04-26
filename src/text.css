@@ -28,7 +28,7 @@ h4{
 .citation{
     font-family: 'Roboto', sans-serif;
     font-size: 1.4rem;
-    font-weight: 800;
+    font-weight: 600;
     padding: 0rem 3rem;
 }
 
@@ -62,7 +62,7 @@ h6{
     font-weight: 700;
 }
 
-p{
+p, b{
     font-family: 'Roboto', sans-serif;
     font-size: 0.8rem;
     line-height: 1.5rem;

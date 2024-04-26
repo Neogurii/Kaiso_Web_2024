@@ -95,6 +95,7 @@ footer .logo {
     width: 3rem;
     height: 3rem;
     background-position: center;
+    background-size: contain;
 }
 
 /*margins*/
@@ -275,6 +276,11 @@ a {
     -ms-animation: slide 90s ease-in-out infinite;
     -o-animation: slide 90s ease-in-out infinite;
     animation: slide 20s ease-in-out infinite;
+}
+
+.citation {
+    text-align: center;
+    width: 50%;
 }
 
 .container section {
@@ -518,14 +524,11 @@ a {
 /*Drag Slideshow -----------------------------------------------------------------*/
 .swiper {
     width: 100%;
-    height: 10rem;
-    background-color: #A6B6D7;
+    background-color: #F2F2F2;
 }
 
 .swiper-slide {
     text-align: center;
-    font-size: 18px;
-    background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -533,15 +536,19 @@ a {
 }
 
 .swiper-slide {
-    width: 10rem;
+    width: 100vw;
 }
 
-.swiper a {
+.swiper-slide img {
+    width: 4rem;
+}
+
+.swiper-slide section{
     display: flex;
-    width: 100%;
-    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0;
 }
-
 /*FIN Drag Slideshow -----------------------------------------------------------------*/
 
 /*Services (Pedagogie + jeu mobile) cases -----------------------------------------------------------------*/
@@ -717,24 +724,48 @@ a {
 }
 
 .character_adrien {
-    background-image: url('./Assets/Logo_square.png');
+    background-image: url('./Assets/Team/waiting_character.png');
 }
 
 .adrien_background {
     background-color: #F2F2F2;
-    background-image: url('./Assets/Logo.png');
+    background-image: url('./Assets/Logo_white.png');
     background-repeat: no-repeat;
     background-position: left;
     background-size: contain;
 }
 
 .character_mike {
-    background-image: url('./Assets/Logo_square.png');
+    background-image: url('./Assets/Team/waiting_character_swipe.png');
 }
 
 .mike_background {
     background-color: #F2F2F2;
-    background-image: url('./Assets/Logo.png');
+    background-image: url('./Assets/Logo_white.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+}
+
+.character_isaac {
+    background-image: url('./Assets/Team/waiting_character.png');
+}
+
+.isaac_background {
+    background-color: #F2F2F2;
+    background-image: url('./Assets/Logo_white.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+}
+
+.character_steeve {
+    background-image: url('./Assets/Team/waiting_character_swipe.png');
+}
+
+.steeve_background {
+    background-color: #F2F2F2;
+    background-image: url('./Assets/Logo_white.png');
     background-repeat: no-repeat;
     background-position: right;
     background-size: contain;
@@ -961,7 +992,7 @@ a {
 
     /*Services (Pedagogie + jeu mobile) cases -----------------------------------------------------------------*/
     .half_desktop {
-        width: 100%;
+        width: 90%;
     }
 
     .service_image {
@@ -974,12 +1005,6 @@ a {
 
     .service_text {
         padding: 3rem 0;
-    }
-
-    .service_text p,
-    .service_text h3,
-    .service_text a {
-        margin: 0 2rem;
     }
 
     .service_case {
@@ -1052,16 +1077,16 @@ a {
         height: calc(100vw);
     }
 
+    .citation {
+        width: 80%;
+    }
+
     .character {
         width: 5rem;
         height: 8rem;
     }
 
-    .mike_background {
-        background-image: none;
-    }
-
-    .adrien_background {
+    .mike_background, .adrien_background, .isaac_background, .steeve_background {
         background-image: none;
     }
 }
