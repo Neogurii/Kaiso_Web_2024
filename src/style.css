@@ -621,6 +621,7 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left;
+    object-fit: contain;
     height: 16rem;
 }
 
